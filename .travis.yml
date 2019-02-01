@@ -20,20 +20,19 @@ install:
   - pip install git+https://github.com/pyinstaller/pyinstaller.git
   - sudo pip install cffi
   - sudo pip install --upgrade setuptools
-  - echo "import zeronet" > ZeroNet/__init__.py
 
 script:
   - python test.py
   - pyinstaller --windowed browser.spec
   - ls dist/
-  - ls dist/ZeronetBrowser
-  - ls dist/ZeronetBrowser.app
+  - ls dist/WebBrowser
+  - ls dist/WebBrowser.app
 
 after_script:
-  - ./dist/ZeronetBrowser.app/Contents/MacOS/ZeronetBrowser
+  - ./dist/ZeronetBrowser.app/Contents/MacOS/WebBrowser
 
 before_deploy:
-  - zip -r build-$TRAVIS_OS_NAME.zip dist/ZeronetBrowser.app
+  - zip -r build-$TRAVIS_OS_NAME.zip dist/WebBrowser.app
 
 deploy:
   provider: releases
