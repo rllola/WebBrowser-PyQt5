@@ -1,0 +1,46 @@
+os: osx
+language: generic
+services:
+  - xvfb
+cache:
+  pip: true
+  directories:
+    - $HOME/sip-4.19.13
+    - $HOME/PyQt5_gpl-5.11.2
+sudo: true
+
+
+before_install:
+  - pip install msgpack gevent enum34
+  - brew install qt5
+  - chmod +x ./get-pyqt5-osx.sh
+  - ./get-pyqt5-osx.sh
+
+install:
+  - pip install git+https://github.com/pyinstaller/pyinstaller.git
+  - sudo pip install cffi
+  - sudo pip install --upgrade setuptools
+  - echo "import zeronet" > ZeroNet/__init__.py
+
+script:
+  - python test.py
+  - pyinstaller --windowed browser.spec
+  - ls dist/
+  - ls dist/ZeronetBrowser
+  - ls dist/ZeronetBrowser.app
+
+after_script:
+  - ./dist/ZeronetBrowser.app/Contents/MacOS/ZeronetBrowser
+
+before_deploy:
+  - zip -r build-$TRAVIS_OS_NAME.zip dist/ZeronetBrowser.app
+
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: $GH_TOKEN
+  file:
+    - build-$TRAVIS_OS_NAME.zip
+  on:
+    tags: true
