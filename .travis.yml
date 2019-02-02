@@ -12,8 +12,8 @@ sudo: true
 
 before_install:
   - pip install msgpack gevent enum34
-  - brew search qt5
-  - brew install qt5@5.11
+  - brew search qt
+  - brew install qt@5.11
   - chmod +x ./get-pyqt5-osx.sh
   - ./get-pyqt5-osx.sh
 
