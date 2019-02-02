@@ -29,9 +29,6 @@ script:
   - ls dist/WebBrowser.app
   - ls dist/WebBrowser.app/Contents
   - ls dist/WebBrowser.app/Contents/Resources
-
-
-after_script:
   - ./dist/WebBrowser.app/Contents/MacOS/WebBrowser
 
 before_deploy:
