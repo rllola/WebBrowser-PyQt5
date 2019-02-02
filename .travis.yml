@@ -28,6 +28,10 @@ script:
   - ls dist/
   - ls dist/WebBrowser
   - ls dist/WebBrowser.app
+  - ls dist/WebBrowser.app/Contents
+  - ls dist/WebBrowser.app/Contents/Resources
+  - ls dist/WebBrowser.app/Contents/Resources/lib
+
 
 after_script:
   - ./dist/WebBrowser.app/Contents/MacOS/WebBrowser
