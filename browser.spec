@@ -22,6 +22,8 @@ a = Analysis(['main.py'],
 pyz = PYZ(a.pure, a.zipped_data,
              cipher=block_cipher)
 
+datas += [('qt.conf', 'qt.conf', 'DATA')]
+
 icon = None
 if platform.startswith("darwin"):
     icon = 'icons/zeronet-logo.icns'
