@@ -30,7 +30,7 @@ script:
   - ls dist/WebBrowser.app
 
 after_script:
-  - ./dist/ZeronetBrowser.app/Contents/MacOS/WebBrowser
+  - ./dist/WebBrowser.app/Contents/MacOS/WebBrowser
 
 before_deploy:
   - zip -r build-$TRAVIS_OS_NAME.zip dist/WebBrowser.app
