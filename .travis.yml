@@ -23,7 +23,6 @@ install:
   - sudo pip install --upgrade setuptools
 
 script:
-  - python test.py
   - pyinstaller --windowed browser.spec
   - ls dist/
   - ls dist/WebBrowser
