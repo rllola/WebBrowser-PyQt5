@@ -26,7 +26,7 @@ script:
   - ls dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Versions/5/Helpers/QtWebEngineProcess.app/Contents/MacOS
   - mkdir dist/WebBrowser.app/Contents/Helpers/
   - cp dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Versions/5/Helpers/QtWebEngineProcess.app/Contents/MacOS/QtWebEngineProcess dist/WebBrowser.app/Contents/Helpers/
-  - ./dist/WebBrowser.app/Contents/MacOS/WebBrowser
+  - QTWEBENGINEPROCESS_PATH=./dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Versions/5/Helpers/QtWebEngineProcess.app/Contents/MacOS/QtWebEngineProcess ./dist/WebBrowser.app/Contents/MacOS/WebBrowser
 
 before_deploy:
   - zip -r build-$TRAVIS_OS_NAME.zip dist/WebBrowser.app
