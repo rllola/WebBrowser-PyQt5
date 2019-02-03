@@ -23,6 +23,7 @@ install:
 
 script:
   - pyinstaller --windowed browser.spec
+  - brew install tree
   - tree dist/WebBrowser.app
   - ./dist/WebBrowser.app/Contents/MacOS/WebBrowser
 
