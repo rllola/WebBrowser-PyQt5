@@ -12,8 +12,9 @@ sudo: true
 
 before_install:
   - pip install msgpack gevent enum34
-  #- cd $( brew --prefix )/Homebrew/Library/Taps/homebrew/homebrew-core && git checkout 25ffe1ce6fe Formula/qt.rb
-  - brew versions qt5
+  - cd $( brew --prefix )/Homebrew/Library/Taps/homebrew/homebrew-core
+  - ls
+  - git checkout 25ffe1ce6fe Formula/qt.rb
   - brew install qt5
   - chmod +x ./get-pyqt5-osx.sh
   - ./get-pyqt5-osx.sh
@@ -26,7 +27,7 @@ install:
 script:
   - pyinstaller --windowed browser.spec
   - ls dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Versions/5/Helpers/QtWebEngineProcess.app/Contents/MacOS
-  - cp dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Versions/5/Helpers/QtWebEngineProcess.app/Contents/MacOS/QtWebEngineProcess dist/WebBrowser.app/Contents/Helpers/QtWebEngineProcess 
+  - cp dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Versions/5/Helpers/QtWebEngineProcess.app/Contents/MacOS/QtWebEngineProcess dist/WebBrowser.app/Contents/Helpers/QtWebEngineProcess
   - ./dist/WebBrowser.app/Contents/MacOS/WebBrowser
 
 before_deploy:
