@@ -12,10 +12,7 @@ sudo: true
 
 before_install:
   - pip install msgpack gevent enum34
-  - cd $( brew --prefix )/Homebrew/Library/Taps/homebrew/homebrew-core
-  - ls
-  - git checkout 56c500b Formula/qt.rb
-  - brew install qt5
+  - brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/56c500b569c724b049be7ab9e12d9693f85522f9/Formula/qt.rb
   - chmod +x ./get-pyqt5-osx.sh
   - ./get-pyqt5-osx.sh
 
