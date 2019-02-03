@@ -29,6 +29,10 @@ script:
   - ls dist/WebBrowser.app
   - ls dist/WebBrowser.app/Contents
   - ls dist/WebBrowser.app/Contents/Resources
+  - ls dist/WebBrowser.app/Contents/Resources/PyQt5
+  - ls dist/WebBrowser.app/Contents/Resources/PyQt5/Qt
+  - ls dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib
+  - ls dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework
   - ls dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Helpers
   - ls dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Helpers/QtWebEngineProcess.app
   - ls dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Helpers/QtWebEngineProcess.app/Contents
