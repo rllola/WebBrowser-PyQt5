@@ -24,7 +24,7 @@ install:
 script:
   - pyinstaller --windowed browser.spec
   - ls dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Versions/5/Helpers/QtWebEngineProcess.app/Contents/MacOS
-  - cp dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Versions/5/Helpers/QtWebEngineProcess.app/Contents/MacOS/QtWebEngineProcess dist/WebBrowser.app/Contents/Helpers/QtWebEngineProcess
+  - cp dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Versions/5/Helpers/QtWebEngineProcess.app/Contents/MacOS/QtWebEngineProcess dist/WebBrowser.app/Contents/Helpers/
   - ./dist/WebBrowser.app/Contents/MacOS/WebBrowser
 
 before_deploy:
