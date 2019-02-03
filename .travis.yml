@@ -29,7 +29,7 @@ script:
   - ls dist/WebBrowser.app
   - ls dist/WebBrowser.app/Contents
   - ls dist/WebBrowser.app/Contents/Resources
-  - ls dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Helpers/QtWebEngineProcess.app/Contents/MacOS
+  - ls dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib
   - ./dist/WebBrowser.app/Contents/MacOS/WebBrowser
 
 before_deploy:
