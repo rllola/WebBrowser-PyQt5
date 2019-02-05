@@ -28,5 +28,5 @@ view.show()
 
 view.page().loadFinished.connect(
     # Display the web page for one second after it loads.
-    lambda ok: QTimer.singleShot(1000, app.quit))
+    lambda ok: QTimer.singleShot(5000, app.quit))
 app.exec_()
