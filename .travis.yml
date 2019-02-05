@@ -27,10 +27,10 @@ script:
   - ls ./dist/WebBrowser.app/Contents/Resources
   - cp -r ./dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Resources/* ./dist/WebBrowser.app/Contents/MacOS
   - ls ./dist/WebBrowser.app/Contents/MacOS
-  - mkdir ./dist/WebBrowser.app/Contents/MacOS/PyQt5/Qt/lib/QtWebEngineCore.framework/Versions/5
+  - mkdir -p ./dist/WebBrowser.app/Contents/MacOS/PyQt5/Qt/lib/QtWebEngineCore.framework/Versions/5
   - cp ./dist/WebBrowser.app/Contents/MacOS/QtWebEngineCore ./dist/WebBrowser.app/Contents/MacOS/PyQt5/Qt/lib/QtWebEngineCore.framework/Versions/5
   - ls ./dist/WebBrowser.app/Contents/MacOS/PyQt5/Qt/lib/QtWebEngineCore.framework/Versions/5
-  - mkdir ./dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Versions/5
+  - mkdir -p ./dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Versions/5
   - cp ./dist/WebBrowser.app/Contents/MacOS/QtWebEngineCore ./dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Versions/5
   - ls ./dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Versions/5
   - ./dist/WebBrowser.app/Contents/MacOS/WebBrowser
