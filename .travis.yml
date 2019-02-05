@@ -22,8 +22,6 @@ install:
   - sudo pip install --upgrade setuptools
 
 script:
-  - sudo /usr/libexec/locate.updatedb
-  - locate content_renderer.service
   - pyinstaller --windowed browser.spec
   - cp -r ./dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Resources ./dist/WebBrowser.app/Contents/Resources
   - ls ./dist/WebBrowser.app/Contents/Resources
