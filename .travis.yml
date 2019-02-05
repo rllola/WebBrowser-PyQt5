@@ -26,6 +26,9 @@ script:
   - locate content_renderer.service
   - pyinstaller --windowed browser.spec
   - cp -r ./dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Resources ./dist/WebBrowser.app/Contents/Resources
+  - ls ./dist/WebBrowser.app/Contents/Resources
+  - cp -r ./dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Resources ./dist/WebBrowser.app/Contents/MacOS
+  - ls ./dist/WebBrowser.app/Contents/MacOS
   - ./dist/WebBrowser.app/Contents/MacOS/WebBrowser
 
 before_deploy:
