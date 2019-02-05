@@ -4,7 +4,8 @@ env: PYTHON=3.6
 sudo: true
 
 install:
-  - sudo pip3 install PyQt5 pyinstaller cffi
+  - pip3 install git+https://github.com/pyinstaller/pyinstaller.git
+  - sudo pip3 install PyQt5 cffi
 
 script:
   - pyinstaller --windowed browser.spec
