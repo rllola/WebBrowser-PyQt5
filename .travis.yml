@@ -1,9 +1,10 @@
 os: osx
-language: python
+language: generic
+env: PYTHON=3.6
 sudo: true
 
 install:
-  - sudo pip install PyQt5 pyinstaller cffi
+  - sudo pip3 install PyQt5 pyinstaller cffi
 
 script:
   - pyinstaller --windowed browser.spec
