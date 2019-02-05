@@ -1,25 +1,11 @@
 os: osx
-language: generic
-services:
-  - xvfb
-cache:
-  pip: true
-  directories:
-    - $HOME/sip-4.19.13
-    - $HOME/PyQt5_gpl-5.11.2
+language: python
+python:
+  - "3.6"
 sudo: true
 
-
-before_install:
-  - pip install msgpack gevent enum34
-  - brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/56c500b569c724b049be7ab9e12d9693f85522f9/Formula/qt.rb
-  - chmod +x ./get-pyqt5-osx.sh
-  - ./get-pyqt5-osx.sh
-
 install:
-  - pip install pyinstaller
-  - sudo pip install cffi
-  - sudo pip install --upgrade setuptools
+  - sudo pip install PyQt5 pyinstaller cffi
 
 script:
   - pyinstaller --windowed browser.spec
