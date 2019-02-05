@@ -25,8 +25,7 @@ script:
   - sudo /usr/libexec/locate.updatedb
   - locate content_renderer.service
   - pyinstaller --windowed browser.spec
-  - brew install tree
-  - tree dist/WebBrowser.app
+  - cp -r ./dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Resources ./dist/WebBrowser.app/Contents/Resources
   - ./dist/WebBrowser.app/Contents/MacOS/WebBrowser
 
 before_deploy:
