@@ -24,7 +24,7 @@ view = QWebEngineView()
 # Use a raw string to avoid accidental special characters in Windows filenames:
 # ``c:\temp`` is `c<tab>emp`!
 view.load(QUrl.fromLocalFile(r'{}'))
-#view.show()
+view.show()
 
 view.page().loadFinished.connect(
     # Display the web page for one second after it loads.
