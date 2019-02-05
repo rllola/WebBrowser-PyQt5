@@ -17,15 +17,15 @@ before_install:
   - ./get-pyqt5-osx.sh
 
 install:
-  - pip install pyinstaller
+  - sudo pip install git+https://github.com/pyinstaller/pyinstaller.git
   - sudo pip install cffi
   - sudo pip install --upgrade setuptools
 
 script:
   - pyinstaller --windowed browser.spec
-  - cp -r ./dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Resources ./dist/WebBrowser.app/Contents/Resources
+  - cp -r ./dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Resources/* ./dist/WebBrowser.app/Contents/Resources
   - ls ./dist/WebBrowser.app/Contents/Resources
-  - cp -r ./dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Resources ./dist/WebBrowser.app/Contents/MacOS
+  - cp -r ./dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Resources/* ./dist/WebBrowser.app/Contents/MacOS
   - ls ./dist/WebBrowser.app/Contents/MacOS
   - ./dist/WebBrowser.app/Contents/MacOS/WebBrowser
 
