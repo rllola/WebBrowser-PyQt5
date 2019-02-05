@@ -1,9 +1,11 @@
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 from PyQt5.QtCore import QUrl, QTimer, QLibraryInfo
+import os
 
 app = QApplication([])
 
+print "QTWEBENGINEPROCESS_PATH : " + os.environ['QTWEBENGINEPROCESS_PATH']
 print "PrefixPath : " + QLibraryInfo.location(QLibraryInfo.PrefixPath)
 print "DocumentationPath : " + QLibraryInfo.location(QLibraryInfo.DocumentationPath)
 print "HeadersPath : " + QLibraryInfo.location(QLibraryInfo.HeadersPath)
