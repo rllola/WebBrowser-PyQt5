@@ -23,7 +23,7 @@ print "SettingsPath : " + QLibraryInfo.location(QLibraryInfo.SettingsPath)
 view = QWebEngineView()
 # Use a raw string to avoid accidental special characters in Windows filenames:
 # ``c:\temp`` is `c<tab>emp`!
-view.load(QUrl.fromLocalFile(r'{}'))
+view.load(QUrl("http://www.pyinstaller.org"))
 view.show()
 
 view.page().loadFinished.connect(
