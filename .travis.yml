@@ -4,13 +4,13 @@ env: PYTHON=3.6
 sudo: true
 
 install:
-  - pip3 install git+https://github.com/pyinstaller/pyinstaller.git
+  - pip3 install https://github.com/rllola/pyinstaller/archive/test_pyqt5_from_scratch.zip
   - sudo pip3 install PyQt5 cffi
 
 script:
   - pyinstaller --windowed browser.spec
   - brew install tree
-  - tree dist/WebBrowser.app
+  - tree /usr/local/lib/python3.6/site-packages/PyQt5
   - ./dist/WebBrowser.app/Contents/MacOS/WebBrowser
 
 before_deploy:
