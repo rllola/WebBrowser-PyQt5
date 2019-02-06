@@ -1,7 +1,8 @@
+import os
+os.environ['QTWEBENGINEPROCESS_PATH'] = os.path.abspath(os.path.curdir)
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 from PyQt5.QtCore import QUrl, QTimer, QLibraryInfo
-import os
 
 app = QApplication([])
 
