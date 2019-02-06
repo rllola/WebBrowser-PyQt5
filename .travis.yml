@@ -23,7 +23,7 @@ install:
 
 script:
   - pyinstaller --windowed browser.spec
-  - ls ./dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib/QtWebEngineCore.framework/Resources
+  - ls ./dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib
   - ls ./dist/WebBrowser.app/Contents/Resources
   - ls ./dist/WebBrowser.app/Contents/MacOS
   - QTWEBENGINEPROCESS_PATH=./dist/WebBrowser.app/Contents/Resources/lib/QtWebEngineCore.framework/Helpers ./dist/WebBrowser.app/Contents/MacOS/WebBrowser
