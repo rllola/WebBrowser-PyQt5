@@ -17,7 +17,7 @@ before_install:
   - ./get-pyqt5-osx.sh
 
 install:
-  - pip install git+https://github.com/pyinstaller/pyinstaller.git
+  - pip install https://github.com/rllola/pyinstaller/archive/test_pyqt5_from_scratch.zip
   - pip install cffi
   - sudo pip install --upgrade setuptools
 
