@@ -16,6 +16,7 @@ install:
   - pip install --upgrade setuptools
 
 script:
+  - python main.py
   - pyinstaller --windowed browser.spec
   - ls ./dist/WebBrowser.app/Contents/Resources/PyQt5/Qt/lib
   - ls ./dist/WebBrowser.app/Contents/Resources
