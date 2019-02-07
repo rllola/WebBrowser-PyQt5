@@ -1,13 +1,7 @@
 os: osx
 language: generic
-services:
-  - xvfb
 cache:
   pip: true
-  directories:
-    - $HOME/sip-4.19.13
-    - $HOME/PyQt5_gpl-5.11.2
-sudo: true
 
 
 before_install:
@@ -19,7 +13,7 @@ before_install:
 install:
   - pip install https://github.com/rllola/pyinstaller/archive/test_pyqt5_from_scratch.zip
   - pip install cffi
-  - sudo pip install --upgrade setuptools
+  - pip install --upgrade setuptools
 
 script:
   - pyinstaller --windowed browser.spec
