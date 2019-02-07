@@ -44,7 +44,7 @@ fi
 tar -xvzf "PyQt5_gpl-$PYQT5_VERSION.tar.gz"
 cd "PyQt5_gpl-$PYQT5_VERSION"
 ls "$($PYTHON_EXE-config --prefix)/bin/"
-$PYTHON_EXE configure.py --static --confirm-license --enable=QtWidgets --enable=QtWebEngineWidgets --enable=QtCore --enable=QtGui --enable=QtPrintSupport --enable=QtPositioning --enable=QtNetwork --enable=QtQuick --enable=QtWebEngineCore --enable=QtQuickWidgets --enable=QtWebChannel --enable=QtQml --qmake=$QMAKE_EXE -n PyQt5.sip --sip="$($PYTHON_EXE-config --prefix)/bin/sip"
+$PYTHON_EXE configure.py --confirm-license --enable=QtWidgets --enable=QtWebEngineWidgets --enable=QtCore --enable=QtGui --enable=QtPrintSupport --enable=QtPositioning --enable=QtNetwork --enable=QtQuick --enable=QtWebEngineCore --enable=QtQuickWidgets --enable=QtWebChannel --enable=QtQml --qmake=$QMAKE_EXE -n PyQt5.sip --sip="$($PYTHON_EXE-config --prefix)/bin/sip"
 make -j $NP
 sudo make install
 echo "Done !"
